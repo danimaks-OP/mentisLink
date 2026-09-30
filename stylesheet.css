@@ -52,20 +52,15 @@ nav {
     transition: transform 0.2s ease;
 }
 
-.nav-item:hover{
+.nav-item:hover:not(.nav-item-active){
     transform: scale(1.03);
-    /*
-    #8E7CFD
-    #03AD75
-    #FD777A
-    #FFAD31
-    #FC474D
-    #59A8FD
-    #9785FD
-    */
 }
 
-.nav-item > img {
+.nav-item.nav-item-active:hover{
+    opacity: 0.88;
+}
+
+.nav-item > svg {
     height: 20px;
     width: 20px;
     margin-right: 20px;
@@ -73,6 +68,8 @@ nav {
 
 .nav-link{
     color: var(--grey);
+    margin: 0;
+    padding-top: 3px;
 }
 
 .nav-item-active {
@@ -93,6 +90,18 @@ nav {
     background-color: black;
     opacity: 0.05;
     border-radius: 3px;
+}
+
+.mc-header {
+    margin: 0;
+    color: var(--grey);
+    display: flex;
+    justify-content: space-between;
+}
+
+.mc-header svg{
+    width: 15px;
+    height: 15px;
 }
 
 
